@@ -18,7 +18,7 @@ Configure MySQL database and AWS Bedrock connection
 Implement video stream capture and screenshot functionality
 
 ### Day 6: Hardware Architecture Adjustment
-Migrate from Raspberry Pi to host + network camera solution
+Finalize host + network camera solution architecture
 
 ### Day 7: Week 1 Summary
 Review foundation setup completion status

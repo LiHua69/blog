@@ -1,6 +1,6 @@
 # 项目介绍
 
-基于树莓派、FastVLM和AWS Bedrock Claude3的智能猫咪行为监控与分析系统
+基于FastVLM和AWS Bedrock Claude3的智能猫咪行为监控与分析系统
 
 {% content-ref url="./" %}
 [.](./)
@@ -13,7 +13,7 @@
 ### 硬件架构变更记录
 
 **2025年7月6日更新：**
-- 硬件平台从树莓派改为Windows/Mac主机
+- 硬件平台采用Windows/Mac主机方案
 - 摄像头方案改为TP-Link网络摄像头
 - 视频数据通过RTSP协议获取
 - Python检测程序运行在主机上，通过RTSP流截取视频帧进行分析

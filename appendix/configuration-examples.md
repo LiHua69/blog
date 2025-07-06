@@ -3,16 +3,17 @@
 ## 环境要求
 
 ### 硬件要求
-- 树莓派4B (推荐4GB RAM)
-- MicroSD卡 (64GB Class 10以上)
-- USB摄像头或CSI摄像头
-- 稳定的网络连接
+- Windows 10+ / macOS 10.15+ 主机
+- TP-Link网络摄像头 (支持RTSP协议)
+- 稳定的网络连接 (WiFi或有线)
+- 充足的存储空间 (用于截图和日志)
 
 ### 软件要求
-- Raspberry Pi OS (64-bit)
+- Windows 10+ / macOS 10.15+
 - Python 3.8+
 - MySQL 8.0+
 - Git
+- OpenCV 4.5+
 
 ## 快速部署
 
