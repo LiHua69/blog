@@ -1,84 +1,84 @@
-# 猫咪行为监控系统开发博客大纲
+# Cat Behavior Monitoring System Development Blog Outline
 
-## 第一周：基础环境搭建
+## Week 1: Foundation Setup
 
-### Day 1: 项目启动
-- 项目需求分析和技术选型
+### Day 1: Project Initialization
+Setup project requirements analysis and technology stack selection
 
-### Day 2: 硬件环境配置  
-- TP-Link摄像头配置和RTSP连接测试
+### Day 2: Hardware Configuration  
+Configure TP-Link camera and test RTSP connection
 
-### Day 3: 开发环境搭建
-- Python环境配置和依赖安装
+### Day 3: Development Environment
+Setup Python environment and install dependencies
 
-### Day 4: 基础服务集成
-- MySQL数据库和AWS Bedrock连接配置
+### Day 4: Basic Service Integration
+Configure MySQL database and AWS Bedrock connection
 
-### Day 5: RTSP视频流处理
-- 实现视频流获取和截图功能
+### Day 5: RTSP Video Stream Processing
+Implement video stream capture and screenshot functionality
 
-### Day 6: 硬件架构调整
-- 从树莓派方案改为主机+网络摄像头方案
+### Day 6: Hardware Architecture Adjustment
+Migrate from Raspberry Pi to host + network camera solution
 
-### Day 7: 第一周总结
-- 基础环境搭建完成情况总结
+### Day 7: Week 1 Summary
+Review foundation setup completion status
 
-## 第二周：核心功能开发
+## Week 2: Core Feature Development
 
-### Day 8: FastVLM集成
-- 集成FastVLM进行图像识别
+### Day 8: FastVLM Integration
+Integrate FastVLM for image recognition capabilities
 
-### Day 9: 行为识别引擎
-- 实现猫咪行为分类和识别逻辑
+### Day 9: Behavior Recognition Engine
+Implement cat behavior classification and recognition logic
 
-### Day 10: 数据存储模块
-- 设计数据库表结构和数据存储逻辑
+### Day 10: Data Storage Module
+Design database schema and data persistence logic
 
-### Day 11: 告警系统集成
-- 集成飞书机器人实现异常告警
+### Day 11: Alert System Integration
+Integrate Feishu bot for anomaly notifications
 
-### Day 12: 系统集成测试
-- 各模块联调和基础功能测试
+### Day 12: System Integration Testing
+Module integration and basic functionality testing
 
-### Day 13: 性能优化
-- 视频处理性能优化和内存管理
+### Day 13: Performance Optimization
+Video processing performance tuning and memory management
 
-### Day 14: 第二周总结
-- 核心功能开发完成情况总结
+### Day 14: Week 2 Summary
+Review core feature development completion status
 
-## 第三周：LLM智能分析
+## Week 3: LLM Intelligent Analysis
 
-### Day 15: 提示词工程设计
-- 设计Claude3的行为分析提示词
+### Day 15: Prompt Engineering Design
+Design Claude3 behavior analysis prompts
 
-### Day 16: AWS Bedrock深度集成
-- 实现智能行为分析和描述生成
+### Day 16: AWS Bedrock Deep Integration
+Implement intelligent behavior analysis and description generation
 
-### Day 17: 智能分析优化
-- 优化分析准确性和响应速度
+### Day 17: Intelligence Analysis Optimization
+Optimize analysis accuracy and response speed
 
-### Day 18: 历史数据分析
-- 实现行为趋势分析和报告生成
+### Day 18: Historical Data Analysis
+Implement behavior trend analysis and report generation
 
-### Day 19: 多场景适配
-- 适配不同光线和环境条件
+### Day 19: Multi-scenario Adaptation
+Adapt to different lighting and environmental conditions
 
-### Day 20: 智能告警优化
-- 基于LLM的智能告警策略
+### Day 20: Smart Alert Optimization
+LLM-based intelligent alert strategy implementation
 
-### Day 21: 第三周总结
-- LLM智能分析功能完成情况总结
+### Day 21: Week 3 Summary
+Review LLM intelligent analysis feature completion status
 
-## 第四周：测试优化和界面
+## Week 4: Testing, Optimization and Interface
 
-### Day 22: 实际环境测试
-- 在真实环境中进行长时间测试
+### Day 22: Real Environment Testing
+Conduct long-term testing in actual environment
 
-### Day 23: 系统稳定性优化
-- 解决测试中发现的稳定性问题
+### Day 23: System Stability Optimization
+Resolve stability issues found during testing
 
-### Day 24: 用户界面开发
-- 开发Web管理界面和监控面板
+### Day 24: User Interface Development
+Develop web management interface and monitoring dashboard
 
-### Day 25: 项目总结和部署
-- 项目完整性检查和部署文档编写
+### Day 25: Project Summary and Deployment
+Complete project review and deployment documentation
