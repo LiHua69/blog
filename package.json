@@ -1,0 +1,29 @@
+{
+  "name": "cat-monitoring-system-docs",
+  "version": "1.0.0",
+  "description": "猫咪行为监控系统开发文档",
+  "main": "index.js",
+  "scripts": {
+    "serve": "gitbook serve",
+    "build": "gitbook build",
+    "install": "gitbook install",
+    "pdf": "gitbook pdf . ./cat-monitoring-system.pdf"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LiHua69/blog.git"
+  },
+  "keywords": [
+    "gitbook",
+    "documentation",
+    "cat-monitoring",
+    "raspberry-pi",
+    "ai",
+    "computer-vision"
+  ],
+  "author": "LiHua69",
+  "license": "MIT",
+  "devDependencies": {
+    "gitbook-cli": "^2.3.2"
+  }
+}

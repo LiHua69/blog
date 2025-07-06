@@ -1,0 +1,31 @@
+# GitBook 构建输出
+_book/
+*.pdf
+*.epub
+*.mobi
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 临时文件
+*.tmp
+*.temp
+.cache/
+
+# 日志文件
+logs/
+*.log

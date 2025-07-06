@@ -1,0 +1,54 @@
+{
+    "title": "猫咪行为监控系统开发日志",
+    "description": "基于树莓派、FastVLM和AWS Bedrock Claude3的智能猫咪行为监控与分析系统开发记录",
+    "author": "LiHua69",
+    "language": "zh-hans",
+    "gitbook": "3.2.3",
+    "plugins": [
+        "highlight",
+        "search",
+        "sharing",
+        "fontsettings",
+        "livereload",
+        "prism",
+        "github",
+        "anchors",
+        "copy-code-button",
+        "expandable-chapters"
+    ],
+    "pluginsConfig": {
+        "github": {
+            "url": "https://github.com/LiHua69/blog"
+        },
+        "sharing": {
+            "facebook": false,
+            "twitter": false,
+            "google": false,
+            "weibo": true,
+            "instapaper": false,
+            "vk": false,
+            "all": ["weibo"]
+        },
+        "fontsettings": {
+            "theme": "white",
+            "family": "sans",
+            "size": 2
+        }
+    },
+    "structure": {
+        "readme": "README.md",
+        "summary": "SUMMARY.md"
+    },
+    "pdf": {
+        "pageNumbers": true,
+        "fontSize": 12,
+        "fontFamily": "Arial",
+        "paperSize": "a4",
+        "margin": {
+            "right": 62,
+            "left": 62,
+            "top": 56,
+            "bottom": 56
+        }
+    }
+}
