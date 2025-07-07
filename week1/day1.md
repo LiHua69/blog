@@ -5,6 +5,7 @@
 - 明确项目需求和目标
 - 制定技术方案
 - 确定开发计划和里程碑
+- 安装Amazon Q并运行成功
 
 ## 需求分析
 
@@ -74,6 +75,7 @@
 - [x] 开发计划制定
 - [x] 项目文档初始化
 - [x] GitBook文档同步
+- [x] Amazon Q CLI安装和配置
 
 ## 明日计划
 
@@ -84,6 +86,90 @@
 ## 遇到的问题
 
 暂无
+
+## 在Windows中安装适用于命令行的 Amazon Q
+
+### 使用命令行进行安装
+
+1. **WSL安装**
+   （如果已经安装，就进行下一步）
+   使用命令提示符进行安装：
+   ```bash
+   sudo apt install wsl
+   ```
+   
+   可以使用以下指令检查wsl是否已安装、查看版本：
+   ```bash
+   wsl -v
+   ```
+
+2. **下载并安装虚拟Ubuntu实例在您的wsl环境中**
+   (如果您过去已经这样做过,它只会将您登录到Ubuntu wsl环境。)
+   从 Windows 命令 shell 输入以下命令:
+   ```bash
+   wget https://desktop-release.q.us-east-1.amazonaws.com/latest/amazon-q.deb
+   ```
+   
+   安装后Ubuntu后，系统会要求您创建一个默认用户帐户(通常会复制您登录的 Windows 用户的名称),然后输入密码。完成后,你们都准备好了。
+   
+   当您在 wsl 帐户地图中到 Windows 主目录时,您会注意到默认目录。
+   我们将更改此设置并输入 wsl 环境的主目录,我们只需键入即可完成此操作:
+   ```bash
+   cd
+   ```
+
+3. **安装解压缩实用程序**:
+   ```bash
+   sudo apt install unzip
+   ```
+   
+   之后会出现要你输入电脑密码的画面，输入即可，但你输入的密码无法显示。输入完成后就按enter键进行解压缩实用程序的安装。
+
+4. **下载包含安装程序的 zip 文件**
+   从 wsl 命令行中,我们使用以下命令:
+   ```bash
+   curl --proto '=https' --tlsv1.2 -sSf https://desktop-release.codewhisperer.us-east-1.amazonaws.com/latest/q-x86_64-linux-musl.zip -o q.zip
+   ```
+   
+   **注意**：请确保正在运行wsl主目录,而不是Windows主目录。如果你使用"pwd"命令,它会告诉你。它应该说"/home/{youruser}" - 如果没有,那么请确保再次输入"cd"命令。
+   
+   **解压**：
+   ```bash
+   unzip q.zip
+   ```
+   
+   它创建了一个名为"q"的子目录,其中包含我们需要的所有文件。我们几乎已经准备好运行安装程序,但首先我们需要通过运行以下命令来启用它:
+   ```bash
+   cd q
+   chmod +x install.sh
+   ```
+   
+   chmod 命令更改 Linux 中文件的权限,我们启用 install.sh 是可执行的,因此我们可以运行安装程序。我们使用以下命令:
+   ```bash
+   ./install.sh
+   ```
+   
+   接下来系统会询问您是否希望它修改您的 shell 配置。回答"是",因为这样做是添加一条指向Amazon Q Developer CLI可执行文件的新路径。完成后,您现在需要激活新 shell。您可以退出并重新启动您的 wsl 环境,或者只需键入:
+   ```bash
+   bash
+   ```
+
+5. **使用 Builder ID 登录 Amazon Q 开发人员**
+   Amazon Q Developer 现已安装,下一阶段我们创建 Builder ID,然后使用它登录。
+   从命令中输入以下命令:
+   ```bash
+   q login
+   ```
+   
+   您将看到两个登录方法的选项,您可以使用向上和向下箭头键进行选择。您要选择第一个选项 , " 使用免费与 Builder ID".(若有Pro License就使用pro,在弹出的页面输入username:****,password:*****,然后点击Sign In)
+   
+   选择此选项时,它会要求您在 Web 浏览器中打开 URL。复制URL,然后在Web浏览器中打开它。您现在需要创建新的 Builder ID,或者使用您可能已经拥有的现有 Builder ID 登录。
+
+6. **调用Amazon Q Developer CLI**
+   现在我们已经安装好了Amazon Q Developer，接下来使用以下命令调用Amazon Q Developer CLI:
+   ```bash
+   q chat
+   ```
 
 ## 学习笔记
 
