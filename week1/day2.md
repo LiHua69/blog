@@ -1,181 +1,50 @@
-# Day 2: Hardware Configuration
+# Day 2: 摄像头初始化配置
 
-## Today's Goals
+## 一、摄像头初始化配置
 
-- Configure TP-Link network camera
-- Test RTSP stream connection
-- Setup basic network configuration
+### 1. 下载TP-Link手机端、客户端
 
-## Hardware Preparation
+在此网站进行下载客户端zip：
+https://resource.tp-link.com.cn/pc/docCenter/showDoc?怎么id=1705542393373570
 
-### Required Equipment
-- TP-Link network camera (e.g., Tapo C200, Kasa KC120)
-- Stable network connection (WiFi or Ethernet)
-- Host computer (Windows/Mac)
-- Router with port forwarding capability
+下载完成后解压到D盘，解压后并安装
 
-### Hardware Setup Photo
+参考文件路径：
+- C:\Users\26559\gitbooktest\assets\images\README.md
+- c:\Users\26559\Documents\WeChat Files\wxid_z63cu97n58m522\FileStorage\Temp\8a55ee05f4b7aea89995a196b53ca5b.png
 
-<div align="center">
-  <img src="../assets/images/day2-guide.jpg" alt="Day2硬件配置指南" width="600">
-  <p><em>TP-Link摄像头配置指南</em></p>
-</div>
+如果有要更新的要求，就让他更新
 
-## Camera Setup
+完成以上步骤后，进行注册/登录，后扫描摄像机上的二维码进行设备添加
 
-### 1. Initial Camera Configuration
+打开客户端获取IP地址：主页->设备管理->设备维护->IP地址为***.***.**.***
 
-```bash
-# Connect camera to power
-# Use manufacturer's mobile app for initial setup
-# Connect camera to WiFi network
-# Note down camera's IP address
+### 2. 下载VLC media player
+
+进入 https://www.videolan.org/vlc/index.zh_CN.html 网站进行下载、安装。
+
+安装后打开，点击左上角"媒体"->"打开捕获设备"->"网络"，输入网络URL：
+
+```
+rtsp://username:password@ip:port/stream1
 ```
 
-### 2. RTSP Configuration
+其中：
+- username：用户名，如admin
+- password：密码，如123456
+- ip：设备IP，如192.168.1.60
+- port：RTSP端口，默认为554，若为默认可不填
+- stream：码流类型，主码流为stream1，子码流为stream2
 
-Enable RTSP stream in camera settings:
-```bash
-# Access camera web interface
-# Navigate to Advanced Settings
-# Enable RTSP stream
-# Set stream quality (HD/SD)
-# Configure authentication credentials
-```
+然后就能看到摄像机所捕获到的画面了。
 
-#### RTSP配置界面截图
-<div align="center">
-  <img src="../assets/images/day2-rtsp-config.jpg" alt="RTSP配置界面" width="500">
-  <p><em>摄像头RTSP配置界面</em></p>
-</div>
+## 二、RTSP 配置
 
-### 3. Network Configuration
+保持Windows和摄像头连接在同一个WIFI中
 
-```bash
-# Set static IP for camera (recommended)
-# Configure port forwarding if needed
-# Test network connectivity
-ping [camera_ip_address]
-```
+在浏览器中输入我们前面所找到的摄像头的IP地址
 
-## RTSP Connection Testing
-
-### 1. RTSP URL Format
-
-```bash
-# Standard RTSP URL format
-rtsp://username:password@camera_ip:port/stream_path
-
-# TL-IPC45AW实际配置 (配置成功 ✅)
-摄像头IP: 192.168.10.235
-用户名: admin
-密码: Aa123456
-```
-
-### 2. 成功的RTSP URL
-
-```bash
-# 主流 (1080P高清) - 推荐录制使用
-rtsp://admin:Aa123456@192.168.10.235:554/11
-
-# 子流 (720P标清) - 推荐实时监控使用  
-rtsp://admin:Aa123456@192.168.10.235:554/12
-
-# 备用格式
-rtsp://admin:Aa123456@192.168.10.235:554/stream1
-rtsp://admin:Aa123456@192.168.10.235:554/stream2
-```
-
-### 3. 测试结果 ✅
-
-```bash
-✅ 网络连通性: 正常
-✅ Web管理界面: http://192.168.10.235 可访问
-✅ RTSP端口554: 开放
-✅ VLC播放测试: 成功
-✅ 所有4个RTSP流: 验证通过
-```
-
-### 2. Test with VLC Player
-
-```bash
-# Open VLC Media Player
-# Media -> Open Network Stream
-# Enter RTSP URL
-# Verify video stream quality
-```
-
-### 3. Test with FFmpeg
-
-```bash
-# Install FFmpeg
-# Test stream capture
-ffmpeg -i rtsp://admin:password@192.168.1.100:554/stream1 -t 10 test.mp4
-```
-
-## Network Optimization
-
-### 1. Bandwidth Configuration
-
-```bash
-# Configure camera bitrate
-# Set appropriate resolution
-# Adjust frame rate for stability
-```
-
-### 2. Quality Settings
-
-```bash
-# Main stream: 1080p for recording
-# Sub stream: 720p for real-time monitoring
-# Night vision: Auto adjustment
-```
-
-### 3. Security Configuration
-
-```bash
-# Change default passwords
-# Enable WPA2/WPA3 encryption
-# Configure access control
-# Regular firmware updates
-```
-
-## Today's Completion
-
-- [x] TP-Link camera physical setup
-- [x] WiFi network connection  
-- [x] RTSP stream configuration ✅
-- [x] Basic connectivity testing ✅
-- [x] RTSP URL validation ✅
-- [x] VLC playback testing ✅
-
-### RTSP配置成功记录
-```bash
-设备: TL-IPC45AW
-IP: 192.168.10.235
-认证: admin/Aa123456
-主流: rtsp://admin:Aa123456@192.168.10.235:554/11
-子流: rtsp://admin:Aa123456@192.168.10.235:554/12
-状态: 全部测试通过 ✅
-```
-
-## Tomorrow's Plan
-
-- Setup Python development environment
-- Install OpenCV and RTSP libraries
-- Create basic video capture script
-
-## Issues Encountered
-
-1. **WiFi Connection**: Ensure camera is within good signal range
-2. **RTSP Authentication**: Verify username/password combination
-3. **Stream Quality**: Balance between quality and network bandwidth
-
-## Learning Notes
-
-- TP-Link camera configuration essentials
-- RTSP protocol basics
-- Network security considerations
+可以让Amazon Q 帮你进行RTSP配置，不过需要你告诉他摄像头IP、进入摄像头IP的密码。
 
 ---
-*Last updated: 2025-07-08 - RTSP configuration successfully completed*
+*Last updated: 2025-07-08*
