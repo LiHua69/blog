@@ -9,6 +9,9 @@ https://resource.tp-link.com.cn/pc/docCenter/showDoc?怎么id=1705542393373570
 
 下载完成后解压到D盘，解压后并安装
 
+![客户端安装界面](../assets/images/tp-link-client-install.png)
+*TP-Link客户端安装界面*
+
 参考文件路径：
 - C:\Users\26559\gitbooktest\assets\images\README.md
 - c:\Users\26559\Documents\WeChat Files\wxid_z63cu97n58m522\FileStorage\Temp\8a55ee05f4b7aea89995a196b53ca5b.png
@@ -24,6 +27,9 @@ https://resource.tp-link.com.cn/pc/docCenter/showDoc?怎么id=1705542393373570
 进入 https://www.videolan.org/vlc/index.zh_CN.html 网站进行下载、安装。
 
 安装后打开，点击左上角"媒体"->"打开捕获设备"->"网络"，输入网络URL：
+
+![VLC网络流设置](../assets/images/vlc-network-stream.png)
+*VLC媒体播放器 - 网络流设置界面*
 
 ```
 rtsp://username:password@ip:port/stream1
